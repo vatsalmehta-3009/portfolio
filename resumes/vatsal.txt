@@ -1,0 +1,148 @@
+VATSAL MEHTA
+
+
+vvatsalmehta3009@gmail.com
+9106245935
+https://www.linkedin.com/in/vatsal-mehta-a7a1a7197
+https://github.com/vatsalmehta-3009
+
+
+
+------------------------
+Surat, India
+
+
+Work Experience
+------------------------
+Senior Python Developer
+Thinkbiz technologies
+02/2022 - Present
+Ahmedabad
+A Marketing Product
+- Designed <b>Full Data Fetching Flow</b> via Twitter api with <b>AWS Cloudformation, Step Functions, Lambda, s3, RDS(postgres), Redshift, Cloudwatch, etc</b> 
+- Designed External Tables Data import using <b>Redshift Spectrum Tables. </b>(Client Data import from csv to tables flow) 
+- Prepared utility State Machines like, <b>State Machine to run Large time taking Queries.</b> 
+- Preformed<b> heavy data wrangling operations using pandas</b> 
+- Prepared Metabase(3rd party tool) <b>Dashboards </b>for clients,  Prepared API's using   <b>API gateway and Fast API</b>  
+- Used wsl, know about <b>Linux commands</b> and <b>aws cli.</b> 
+- For data import system prepared <b>ETL workflow </b>using State machines and deployed through cloudformation 
+- Well aware about <b>git commands</b> like rebase, revert, stash, etc.. 
+- Prepared <b>Intern Training Programme</b> and was <b>supervisor </b>for training interns 
+- wrote extensive <b>Pytests </b>for local code testing. 
+
+
+
+Python Teacher/ FreeLancer
+Mount Litera Zee School
+05/2021 - 02/2022
+Surat
+Achievements/Tasks
+
+
+
+
+
+
+Education
+------------------------
+Bachelor of Information Technology
+Parul University
+06/2017 - 04/2021
+Grades
+- CGPA: 6.89 
+
+
+Data Science And  Machine Learning for Professionals(Online)
+Skillslash
+07/2021 - 04/2022
+Bangalore
+Courses
+
+
+
+
+
+Skills
+------------------------
+-Python
+-AWS Step Functions
+-AWS Lambda
+-AWS CloudFormation
+-AWS Redshift
+-AWS S3
+-AWS RDS
+-AWS API Gateway
+-AWS Cloudwatch
+-AWS Redshift Spectrum
+-Pandas
+-Numpy
+-SQL
+-Ubuntu CLI
+-Git
+-Fast API
+-Sklearn
+-Matplotlib
+-Django
+-Flask
+-Selenium
+
+
+
+Personal Projects
+------------------------
+Birthday Extractor
+02/2022
+- <b>Extract birthday msgs </b>from Whatapp Family group 
+- Process to get a csv with, birthdates and names 
+- Post birthdays to calendar via <b>Calendar Api</b> 
+
+
+Scrape Instagram Data
+12/2022 - 12/2022
+- Found user profiles related to particular hashtags 
+- DM periodically to all those profiles 
+
+
+Telegram bot for school management
+12/2021
+- Registration of a teacher 
+- Display time tables 
+- Assigning proxies 
+
+
+Predicting Loan Defaults
+11/2021
+- Dealt with missing values, removed irrelevant features, cleaned features, built a model 
+
+
+
+
+
+Achievements
+------------------------
+Gold Badge Holder on HackerRank in Python (10/2020)
+
+
+Silver Badge Holder on HackerRank in SQL (10/2020)
+
+
+Selected for State Level Hackathon (10/2019)
+
+
+Served as Sports Secretary, at SMJV Vadodara (06/2019)
+
+
+Played National Table Tennis, Held at Indore (07/2019)
+
+
+
+
+
+Languages
+------------------------
+-English- (80/100)
+-Hindi- (80/100)
+-Gujarati- (80/100)
+
+
+

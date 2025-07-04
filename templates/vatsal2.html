@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ personal_info.name }} - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/vatsal2.css') }}">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="profile-pic">
+                <div class="profile-initial">{{ personal_info.name[0] }}</div>
+            </div>
+            <h3>{{ personal_info.name }}</h3>
+            <p>{{ personal_info.title }}</p>
+        </div>
+        
+        <ul class="sidebar-nav">
+            <li><a href="#home" class="nav-link active" data-section="home">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a></li>
+            <li><a href="#about" class="nav-link" data-section="about">
+                <i class="fas fa-user"></i>
+                <span>About</span>
+            </a></li>
+            <li><a href="#experience" class="nav-link" data-section="experience">
+                <i class="fas fa-briefcase"></i>
+                <span>Experience</span>
+            </a></li>
+            <li><a href="#skills" class="nav-link" data-section="skills">
+                <i class="fas fa-code"></i>
+                <span>Skills</span>
+            </a></li>
+            <li><a href="#projects" class="nav-link" data-section="projects">
+                <i class="fas fa-project-diagram"></i>
+                <span>Projects</span>
+            </a></li>
+            <li><a href="#achievements" class="nav-link" data-section="achievements">
+                <i class="fas fa-trophy"></i>
+                <span>Achievements</span>
+            </a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a></li>
+        </ul>
+        
+        <div class="sidebar-footer">
+            <div class="social-links">
+                <a href="{{ personal_info.linkedin }}" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="{{ personal_info.github }}" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:{{ personal_info.email }}" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="{{ personal_info.whatsapp }}" target="_blank" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <div class="mobile-toggle" id="mobileToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="container-fluid">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            <span class="greeting">Hello, I'm</span>
+                            <span class="name">{{ personal_info.name }}</span>
+                        </h1>
+                        <h2 class="hero-subtitle">{{ personal_info.title }}</h2>
+                        <p class="hero-description">{{ personal_info.summary }}</p>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">{{ work_experience|length }}+</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">{{ projects|length }}+</span>
+                                <span class="stat-label">Projects</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">{{ total_skills }}+</span>
+                                <span class="stat-label">Skills</span>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-actions">
+                            <a href="#contact" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Get In Touch
+                            </a>
+                            <a href="#projects" class="btn btn-outline">
+                                <i class="fas fa-eye"></i>
+                                View Projects
+                            </a>
+                        </div>
+                        
+                        <div class="hero-social-links">
+                            <a href="{{ personal_info.linkedin }}" target="_blank" class="social-btn linkedin" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="{{ personal_info.github }}" target="_blank" class="social-btn github" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="mailto:{{ personal_info.email }}" class="social-btn email" title="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="{{ personal_info.whatsapp }}" target="_blank" class="social-btn whatsapp" title="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-visual">
+                        <div class="floating-elements">
+                            <div class="floating-card" data-speed="2">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="floating-card" data-speed="1.5">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <div class="floating-card" data-speed="2.5">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="floating-card" data-speed="1">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container-fluid">
+                <div class="section-header">
+                    <h2>About Me</h2>
+                    <p>Get to know me better</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="about-content">
+                            <h3>Professional Journey</h3>
+                            <p>{{ personal_info.summary }}</p>
+                            
+                            <div class="about-grid">
+                                <div class="about-card">
+                                    <div class="card-icon">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <h4>Education</h4>
+                                    <p>{{ education[0].degree }} from {{ education[0].institution }}</p>
+                                </div>
+                                
+                                <div class="about-card">
+                                    <div class="card-icon">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                    <h4>Experience</h4>
+                                    <p>{{ work_experience|length }}+ years in Python Development</p>
+                                </div>
+                                
+                                <div class="about-card">
+                                    <div class="card-icon">
+                                        <i class="fas fa-trophy"></i>
+                                    </div>
+                                    <h4>Achievements</h4>
+                                    <p>Gold Badge in Python, Silver Badge in SQL on HackerRank</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="languages-section">
+                            <h3>Languages</h3>
+                            {% for language in languages %}
+                            <div class="language-item">
+                                <div class="language-info">
+                                    <span class="language-name">{{ language.name }}</span>
+                                    <span class="language-level">{{ language.proficiency }}%</span>
+                                </div>
+                                <div class="language-bar">
+                                    <div class="language-fill" style="width: {{ language.proficiency }}%"></div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container-fluid">
+                <div class="section-header">
+                    <h2>Work Experience</h2>
+                    <p>My professional journey</p>
+                </div>
+                
+                <div class="experience-timeline">
+                    {% for job in work_experience %}
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="job-header">
+                                <h3>{{ job.title }}</h3>
+                                <h4>{{ job.company }}</h4>
+                                <div class="job-meta">
+                                    <span class="job-duration">
+                                        <i class="fas fa-calendar"></i>
+                                        {{ job.duration }}
+                                    </span>
+                                    <span class="job-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        {{ job.location }}
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <p class="job-description">{{ job.description }}</p>
+                            
+                            <div class="job-achievements">
+                                <h5>Key Achievements:</h5>
+                                <ul>
+                                    {% for achievement in job.achievements %}
+                                    <li>{{ achievement }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container-fluid">
+                <div class="section-header">
+                    <h2>Skills & Technologies</h2>
+                    <p>My technical expertise</p>
+                </div>
+                
+                <div class="skills-container">
+                    {% for category, skill_list in skills.items() %}
+                    <div class="skill-category">
+                        <h3>{{ category }}</h3>
+                        <div class="skills-grid">
+                            {% for skill in skill_list %}
+                            <div class="skill-item">
+                                <span class="skill-name">{{ skill.name }}</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: {{ skill.level }}%"></div>
+                                    </div>
+                                    <span class="skill-percentage">{{ skill.level }}%</span>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container-fluid">
+                <div class="section-header">
+                    <h2>Featured Projects</h2>
+                    <p>Some of my recent work</p>
+                </div>
+                
+                <div class="projects-grid">
+                    {% for project in projects %}
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>{{ project.title }}</h3>
+                            <span class="project-date">{{ project.date }}</span>
+                        </div>
+                        
+                        <p class="project-description">{{ project.description }}</p>
+                        
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                {% for feature in project.features %}
+                                <li>{{ feature }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        
+                        <div class="project-tech">
+                            {% for tech in project.technologies %}
+                            <span class="tech-tag">{{ tech }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="section">
+            <div class="container-fluid">
+                <div class="section-header">
+                    <h2>Achievements & Awards</h2>
+                    <p>Recognition of my work</p>
+                </div>
+                
+                <div class="achievements-grid">
+                    {% for achievement in achievements %}
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <p>{{ achievement }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container-fluid">
+                <div class="section-header">
+                    <h2>Get In Touch</h2>
+                    <p>Let's work together</p>
+                </div>
+                
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>{{ personal_info.email }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <p>{{ personal_info.phone }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <p>{{ personal_info.location }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-social-links">
+                            <h4>Connect With Me</h4>
+                            <div class="social-buttons">
+                                <a href="{{ personal_info.linkedin }}" target="_blank" class="contact-social-btn linkedin" title="LinkedIn">
+                                    <i class="fab fa-linkedin"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="{{ personal_info.github }}" target="_blank" class="contact-social-btn github" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                                <a href="mailto:{{ personal_info.email }}" class="contact-social-btn email" title="Email">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Email</span>
+                                </a>
+                                <a href="{{ personal_info.whatsapp }}" target="_blank" class="contact-social-btn whatsapp" title="WhatsApp">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>WhatsApp</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="subject" placeholder="Subject" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/vatsal2.js') }}"></script>
+</body>
+</html> 
